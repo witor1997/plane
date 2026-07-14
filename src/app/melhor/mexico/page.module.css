@@ -1,0 +1,88 @@
+.container {
+  padding: 24px;
+}
+
+.container h1 {
+  margin-bottom: 16px;
+}
+
+.container h4 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.container p {
+  line-height: 1.6;
+}
+
+.carousel {
+  position: relative;
+  margin: 12px 0 16px;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 8px 0 16px;
+  gap: 16px;
+  margin-bottom: 0;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  flex: 0 0 72%;
+  max-width: 72%;
+  min-width: 240px;
+  width: 100%;
+  height: 340px;
+  border-radius: 12px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.arrowLeft {
+  left: 8px;
+}
+
+.arrowRight {
+  right: 8px;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: transparent;
+}

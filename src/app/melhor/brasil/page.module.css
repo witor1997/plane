@@ -1,0 +1,11 @@
+.container {
+  padding: 24px;
+}
+
+.hero {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  margin: 12px 0;
+}

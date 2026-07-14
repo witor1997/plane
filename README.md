@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Objetivo do projeto
+
+O objetivo deste projeto é criar um site de turismo chamado Tourist BH para mostrar destinos, informações e páginas de viagem de forma simples.
+
+## Como repetir
+
+Para repetir a mesma ideia em outras partes do projeto, basta usar a mesma estrutura de seção e trocar o título e o texto.
+
+Exemplo:
+
+1. Objetivo do projeto
+2. Funcionalidades
+3. Como rodar o projeto
+4. Organização do conteúdo
+
 ## Getting Started
 
 First, run the development server:

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/melhor/pages/argentina.tsx", "src/app/melhor/mexico/page.tsx"  ],
   "exclude": ["node_modules"]
 }
