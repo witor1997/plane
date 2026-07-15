@@ -1,5 +1,5 @@
-import Title from "@/componets/Title";
-import Grid from "@/componets/Grid";
+import Title from "@/components/Title";
+import Grid from "@/components/Grid";
 import tourist from "@/lib/tourist";
 
 export default function Home() {
