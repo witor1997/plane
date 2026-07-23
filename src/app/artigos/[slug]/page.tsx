@@ -3,7 +3,7 @@ import path from "path";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import MexicoCarousel from "@/app/melhor/mexico/MexicoCarousel";
-import ArgentinaCarousel from "@/app/melhor/argentina/argentinaCarousel";
+import ArgentinaCarousel from "@/app/melhor/argentina/ArgentinaCarousel";
 
 export const dynamic = "force-static";
 
@@ -16,7 +16,7 @@ type Artigo = {
 };
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 async function getArtigos() {
@@ -64,7 +64,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const artigos = await getArtigos();
   const artigo = artigos.find((item) => item.slug === slug);
 
@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const artigos = await getArtigos();
   const artigo = artigos.find((item) => item.slug === slug);
 
@@ -92,9 +92,9 @@ export default async function Page({ params }: Props) {
   const images = await getDestinationImages(slug);
 
   let carousel = null;
-
   if (slug === "mexico") {
     carousel = <MexicoCarousel images={images} title={artigo.titulo} />;
+
   } else if (slug === "argentina") {
     carousel = <ArgentinaCarousel images={images} title={artigo.titulo} />;
   }

@@ -2,7 +2,7 @@ import { readdir } from "fs/promises";
 import path from "path";
 
 import tourist from "@/lib/tourist";
-import ArgentinaCarousel from "./argentinaCarousel";
+import ArgentinaCarousel from "./ArgentinaCarousel";
 import styles from "./page.module.css";
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
