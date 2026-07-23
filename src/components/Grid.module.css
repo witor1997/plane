@@ -38,6 +38,9 @@
 
 .content {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .title {
@@ -46,4 +49,32 @@
 
 .location {
   margin: 0;
+}
+
+.infoCard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f4f4f4;
+  border: 1px solid #e6e6e6;
+}
+
+.infoCard div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+}
+
+.infoCard strong {
+  font-size: 0.95rem;
+  color: #111;
 }

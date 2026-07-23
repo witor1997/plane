@@ -1,15 +1,16 @@
+
 "use client";
 
 import { useRef } from "react";
 
 import styles from "./page.module.css";
 
-type MexicoCarouselProps = {
+type ArgentinaCarouselProps = {
   images: string[];
   title: string;
 };
 
-export default function MexicoCarousel({ images, title }: MexicoCarouselProps) {
+export default function ArgentinaCarousel({ images, title }: ArgentinaCarouselProps) {
   const galleryRef = useRef<HTMLDivElement | null>(null);
 
   const scrollGallery = (direction: number) => {
@@ -23,12 +24,14 @@ export default function MexicoCarousel({ images, title }: MexicoCarouselProps) {
   };
 
   return (
-    <div className={styles.carousel}>
-        ←
-  
+    <div className={styles.carouselContainer}>
+
   <button onClick={() => scrollGallery(-1)} aria-label="Imagem anterior">←</button>
+  
 
   <div className={styles.gallery} ref={galleryRef}>
+
+
     {images.map((imageUrl, index) => (
       <img
         key={index}
@@ -39,7 +42,7 @@ export default function MexicoCarousel({ images, title }: MexicoCarouselProps) {
       />
     ))}
   </div>
- <button onClick={() => scrollGallery(1)} aria-label="Próxima imagem">Avançar ➡</button>
-    </div>
+  <button onClick={() => scrollGallery(1)} aria-label="Próxima imagem">→</button>
+</div>
   );
 }

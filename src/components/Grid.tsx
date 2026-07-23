@@ -1,7 +1,19 @@
 import Link from "next/link";
 import styles from "./Grid.module.css";
 
-export default function Grid({ tourist }: { tourist: Array<{ id: number; name: string; slug: string; imageUrl: string; location: string }> }) {
+type TouristItem = {
+  id: number;
+  name: string;
+  slug: string;
+  imageUrl: string;
+  location: string;
+  city?: string;
+  country?: string;
+  days?: string;
+  price?: string;
+};
+
+export default function Grid({ tourist }: { tourist: TouristItem[] }) {
   return (
     <div className={styles.grid}>
       {tourist.map((item) => {
@@ -10,7 +22,7 @@ export default function Grid({ tourist }: { tourist: Array<{ id: number; name: s
         return (
           <div key={item.id}>
             <Link
-              href={`/melhor/${item.slug}`}
+              href={`/artigos/${item.slug}`}
               className={`${styles.itemLink} ${isThirdItem ? styles.featured : ""}`}
             >
               <img
@@ -23,6 +35,24 @@ export default function Grid({ tourist }: { tourist: Array<{ id: number; name: s
               <div className={styles.content}>
                 <h3 className={styles.title}>{item.name}</h3>
                 <p className={styles.location}>{item.location}</p>
+                <div className={styles.infoCard}>
+                  <div>
+                    <span className={styles.label}>Cidade</span>
+                    <strong>{item.city}</strong>
+                  </div>
+                  <div>
+                    <span className={styles.label}>País</span>
+                    <strong>{item.country}</strong>
+                  </div>
+                  <div>
+                    <span className={styles.label}>Dias</span>
+                    <strong>{item.days}</strong>
+                  </div>
+                  <div>
+                    <span className={styles.label}>Preço</span>
+                    <strong>{item.price}</strong>
+                  </div>
+                </div>
               </div>
             </Link>
           </div>

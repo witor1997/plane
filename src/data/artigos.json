@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "mexico",
+    "titulo": "México",
+    "autor": "Gustavo",
+    "dataPublicacao": "2026-07-20",
+    "conteudo": "torismo por México."
+  },
+
+    {
+    "slug": "brasil",
+    "titulo": "Brasil",
+    "autor": "Gustavo",
+    "dataPublicacao": "2026-07-20",
+    "conteudo": "torismo por brasil."
+  },
+
+  {
+    "slug": "chile",
+    "titulo": "Chile",
+    "autor": "Gustavo",
+    "dataPublicacao": "2026-07-20",
+    "conteudo": "torismo por chile."
+  },
+
+  {
+    "slug": "argentina",
+    "titulo": "Argentina",
+    "autor": "Gustavo",
+    "dataPublicacao": "2026-07-20",
+    "conteudo": "torismo por argentina."
+  }
+
+
+]
